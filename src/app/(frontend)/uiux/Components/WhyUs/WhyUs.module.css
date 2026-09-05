@@ -1,0 +1,206 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: #000000;
+    padding: 0px clamp(80px, 15vw, 350px);
+}
+.main::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: url('./1.webp') no-repeat center center / cover;
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.28) 10%,
+        rgba(0, 0, 0, 1) 32%,
+        rgba(0, 0, 0, 1) 68%,
+        rgba(0, 0, 0, 0.28) 90%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.28) 10%,
+        rgba(0, 0, 0, 1) 32%,
+        rgba(0, 0, 0, 1) 68%,
+        rgba(0, 0, 0, 0.28) 90%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+.MainConatiner{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 41px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.top{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 12px;
+}
+.top h4{
+    font-family: var(--font-awesome-serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: var(--fs-34);
+    line-height: 47px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    margin: 0;
+}
+.top p{
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: var(--fs-24);
+    line-height: 29px;
+    font-feature-settings: 'salt' on;
+    color: #9C9C9C;
+    margin: 0;
+}
+.Bottom{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    gap: 20px;
+}
+.Card{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px;
+    flex: 1;
+    height: 250px;
+    min-width: 0;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    position: relative;
+    isolation: isolate;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.098) 0%,
+            rgba(36, 36, 36, 0.2) 100%
+        ) padding-box,
+        linear-gradient(
+            90deg,
+            rgba(87, 87, 87, 0.22) 0%,
+            rgba(99, 99, 99, 0.5) 290%,
+            rgba(119, 119, 119, 0.95) 100%
+        ) border-box;
+    backdrop-filter: blur(14px) saturate(115%);
+    -webkit-backdrop-filter: blur(14px) saturate(115%);
+}
+.Card::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            120% 90% at 0% 0%,
+            rgba(255, 255, 255, 0.07) 0%,
+            rgba(255, 255, 255, 0.025) 14%,
+            rgba(255, 255, 255, 0) 62%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.035) 0%,
+            rgba(255, 255, 255, 0) 42%
+        );
+}
+.Card h4{
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: var(--fs-26);
+    line-height: 31px;
+    font-feature-settings: 'salt' on;
+    color: #FFFFFF;
+    margin: 0;
+    max-width: 196px;
+    position: relative;
+}
+.Card p{
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    font-feature-settings: 'salt' on;
+    color: #9C9C9C;
+    margin: 0;
+    max-width: 224px;
+    position: relative;
+}
+@media (max-width: 900px) {
+    .main{
+        padding: 60px clamp(24px, 8vw, 80px);
+    }
+    .Bottom{
+        flex-wrap: wrap;
+    }
+    .Card{
+        flex: 1 1 calc(50% - 10px);
+        min-width: 220px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+    .main{
+        padding-left: clamp(24px, 7vw, 150px);
+        padding-right: clamp(24px, 7vw, 150px);
+    }
+}
+@media (max-width: 640px) {
+    .main{
+        padding: 0px 24px;
+    }
+    .MainConatiner{
+        gap: 32px;
+    }
+    .top h4{
+        font-size: 26px;
+        line-height: 1.35;
+    }
+    .top p{
+        font-size: 18px;
+        line-height: 1.25;
+    }
+    .Bottom{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 12px;
+    }
+    .Card{
+        flex: 1 1 auto;
+        width: 100%;
+        min-width: 0;
+        gap: 16px;
+        height: auto;
+        padding: 20px;
+    }
+    .Card h4{
+        font-size: 20px;
+        max-width: none;
+    }
+    .Card p{
+        font-size: 15px;
+        max-width: none;
+    }
+}

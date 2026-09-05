@@ -1,0 +1,113 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+padding: clamp(80px, 12vw, 120px) clamp(24px, 12vw, 50px);
+    background-color: #000000;
+}
+.Mainconatiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+   
+    gap: 32px;
+}
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+     max-width: 958px;
+
+}
+.top p{
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: var(--fs-26);
+    color: #FFFFFF;
+    margin: 0;
+}
+.bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.buttontt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 7.5px 8px 7.5px 18px;
+    border-radius: 83px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+}
+.buttontt p{
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: var(--fs-26);
+    color: #000000;
+    margin: 0;
+}
+.svgdd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 39px;
+    height: 39px;
+    background-color: #000000;
+    border-radius: 50%;
+}
+.svgdd svg{
+    transition: transform 0.3s ease;
+}
+.buttontt:hover .svgdd svg{
+    transform: rotate(45deg);
+}
+@media (max-width: 640px) {
+    .main{
+        padding: 80px 24px;
+    }
+    .top p{
+        font-size: 20px;
+    }
+    .Mainconatiner{
+        gap: 25px;
+        align-items: flex-start;
+    }
+    .buttontt p{
+        font-size: 18px;
+    }
+    .bottom{
+        align-items: flex-start;
+        justify-content: left;
+    }
+    .top{
+        text-align: left;
+    }
+    .buttontt{
+        padding: 8px 10px 8px 14px;
+        gap: 10px;
+    }
+    .svgdd{
+        width: 24px;
+        height: 24px;
+    }
+    .svgdd svg{
+        width: 12px;
+        height: 12px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+    .main{
+        padding-left: clamp(24px, 7vw, 150px);
+        padding-right: clamp(24px, 7vw, 150px);
+    }
+}

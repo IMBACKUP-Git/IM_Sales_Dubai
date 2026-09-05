@@ -1,0 +1,94 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #000000;
+    padding: 0px clamp(24px, 12vw, 240px) clamp(48px, 8vw, 120px) clamp(24px, 15vw, 240px);
+}
+.Mainconatiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 50px;
+
+}
+.top{
+    display: flex;
+    justify-content: center;
+}
+.top h4{
+        font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: var(--fs-26);
+    color: #FFFFFF;
+    margin: 0;
+}
+.brands{
+       font-family: var(--font-awesome-serif);
+    font-weight: 400;
+    font-size: var(--fs-26);
+    color: #D2AC59;
+    margin: 0;
+}
+.bottom{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 275px));
+    grid-auto-rows: 195px;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+.card{
+    width: 100%;
+    max-width: 275px;
+    height: 195px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background:
+        linear-gradient(#0F0F0F, #0F0F0F) padding-box,
+        linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.05) 100%) border-box;
+    border: 1.6px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    will-change: transform, opacity;
+}
+.card img{
+    max-width: 65%;
+    max-height: 55%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+@media (max-width: 640px) {
+    .main{
+        padding: 0px 24px 80px 24px;
+    }
+    .Mainconatiner{
+        gap: 35px;
+        justify-content: left;
+        align-items: flex-start;
+    }
+    .bottom{
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 118px;
+        gap: 10px;
+        width: 100%;
+    }
+    .card{
+        width: 100%;
+        max-width: none;
+        height: 118px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+    .main{
+        padding-left: clamp(24px, 7vw, 150px);
+        padding-right: clamp(24px, 7vw, 150px);
+    }
+}

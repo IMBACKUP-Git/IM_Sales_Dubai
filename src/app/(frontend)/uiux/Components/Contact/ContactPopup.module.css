@@ -1,0 +1,210 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+.popup {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-radius: 11.11px;
+    padding: clamp(32px, 5vw, 51px);
+    background-image: url('./1.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset -5.55px -5.55px 277.64px 0px rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(46.64px);
+    -webkit-backdrop-filter: blur(46.64px);
+}
+.closeBtn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0;
+    transition: background 0.15s;
+    z-index: 1;
+}
+.closeBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.formHeading {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-bottom: 40px;
+    padding-right: 30px;
+}
+.formTitle {
+    font-family: var(--font-pretendard);
+    font-weight: 500;
+    font-size: var(--fs-34);
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
+}
+.formSubtitle {
+    font-family: var(--font-awesome-serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: var(--fs-34);
+    color: #D2AC59;
+}
+.formHeading p {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: var(--fs-16);
+    color: #ffffff;
+    margin: 0;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.formRow {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.fieldWrap {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.input,
+.textarea {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #AB753F;
+    background-color: #00000033;
+    padding: 14px 17px;
+    font-size: var(--fs-16);
+    font-weight: 400;
+    color: #ffffff;
+    font-family: var(--font-pretendard);
+    outline: none;
+    box-sizing: border-box;
+}
+.textarea {
+    height: 100px;
+    resize: none;
+}
+.input::placeholder,
+.textarea::placeholder {
+    color: #ffffff;
+    font-size: var(--fs-16);
+    font-weight: 400;
+    font-family: var(--font-pretendard);
+}
+.input:focus,
+.textarea:focus {
+    border-color: #ffffff;
+}
+.inputError {
+    border-color: #ff6b6b;
+}
+.errorMsg {
+    font-size: 12px;
+    color: #ff6b6b;
+    font-family: var(--font-pretendard);
+    margin-top: 2px;
+}
+.ctaRow {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+.cta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background-color: #000000;
+    border: none;
+    border-radius: 999px;
+    padding: 7.5px 8px 7.5px 18px;
+    cursor: pointer;
+}
+.cta:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.ctaText {
+    font-size: var(--fs-20);
+    font-weight: 400;
+    color: #ffffff;
+    font-family: var(--font-pretendard);
+    white-space: nowrap;
+}
+.ctaArrow {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.ctaArrow svg {
+    width: 15px;
+    height: 15px;
+    transition: transform 0.3s ease;
+}
+.cta:hover .ctaArrow svg {
+    transform: rotate(45deg);
+}
+@media (max-width: 640px) {
+    .popup {
+        padding: 32px 20px 28px;
+        max-height: 95vh;
+    }
+    .formHeading {
+        margin-bottom: 24px;
+        padding-top: 15px;
+        padding-right: 0;
+    }
+    .formRow {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+    .textarea {
+        height: 80px;
+    }
+    .ctaRow {
+        margin-top: 24px;
+    }
+    .ctaArrow {
+        width: 26px;
+        height: 26px;
+    }
+    .ctaArrow svg {
+        width: 11px;
+        height: 11px;
+    }
+}

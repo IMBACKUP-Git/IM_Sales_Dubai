@@ -1,0 +1,85 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #000000;
+  overflow: hidden;
+  padding:
+    0
+    clamp(80px, 15vw, 230px)
+    clamp(80px, 8vw, 120px)
+    clamp(80px, 15vw, 288px);
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: 82vh;
+  overflow: hidden;
+  border-radius: clamp(12px, 1.6vw, 22px);
+  background: #000000;
+  perspective-origin: 50% 50%;
+  touch-action: none;
+  isolation: isolate;
+}
+
+.stage {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.stage:active {
+  cursor: grabbing;
+}
+
+.tile {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+  contain: paint;
+  background: #000000;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 0;
+    margin: 0;
+  }
+
+  .wrap {
+    max-height: 88svh;
+    border-radius: 0;
+    touch-action: pan-y;
+  }
+
+  .stage {
+    cursor: default;
+    touch-action: pan-y;
+    pointer-events: none;
+  }
+
+  .tile {
+    background: transparent;
+  }
+}

@@ -38,35 +38,49 @@ export const metadata = {
   },
 }
 
-import HomePage from "./_components/main/home";
-import Brand from "./_components/brands/brands";
-import ProjectsGrid from "./_components/ProjectsGrid/ProjectsGrid";
-import Packaging from "./_components/packing/packing";
-import Black from "./_components/black/black";
-import White from "./_components/white/white";
-import ClutchSection from "./_components/clutch/clutch";
-import ContactCopy from "./_components/ContactCopy/ContactCopy";
-import FAQS from "./_components/FAQCopy/FAQCopy";
-import Grid from "./_components/Grids/Grids";
-import Footer from "./_components/footerCopy/footerCopy";
-import StickyCta from "./_components/StickyCta/StickyCta";
+import Footer from './Components/Footer/footerCopy'
+import Navbar from './Components/Navbar/Navbar'
+import Landing from './Components/Landing/Landing'
+import Contact from './Components/Contact/Contact'
+import StickyCta from './Components/StickyCta/StickyCta'
+import styles from './page.module.css'
+import TextTop from './Components/TextTop/TextTop'
+// import ClutchSection from './Components/Clutch/clutch'
+import FAQS from './Components/FAQS/FAQS'
+import Trust from './Components/Trust/Trust'
+import WhyUs from './Components/WhyUs/WhyUs'
+import DesignBuild from './Components/DesignBuild/DesignBuild'
+import HowWorks from './Components/HowWorks/HowWorks'
+import StartSection from './Components/StartSection/StartSection'
+import Youhaveseen from './Components/Youhaveseen/Youhaveseen'
+import Work from './Components/Work/Work'
+import YourInterface from './Components/YourInterface/YourInterface'
+// import Imageanime from './Components/Imageanime/Imageanime'
+// import ConvexGallery from './Components/ConvexGallery/ConvexGallery'
 
-export default function Chitti() {
-    return (
-        <>
-            <HomePage />
-            {/* <Brand /> */}
-            <ProjectsGrid />
-            <Packaging />
-            <Black />
-            <White />
-            <ClutchSection />
-            <ContactCopy />
-            <FAQS />
-            <Grid />
-            <div id="footer-sentinel" style={{ height: '1px' }} />
-            <Footer />
-            <StickyCta />
-        </>
-    )
+export default function UIUXPage() {
+  return (
+    <>
+      <Navbar />
+      <div className={styles.hero}>
+        <Landing />
+      </div>
+      <TextTop />
+      <Trust />
+      <Work />
+      <YourInterface />
+      <WhyUs />
+      {/* <Imageanime /> */}
+      <DesignBuild />
+      <HowWorks />
+      <Youhaveseen />
+      {/* <ClutchSection /> */}
+      <Contact />
+      <FAQS />
+      <StartSection />
+      {/* <ConvexGallery /> */}
+      <Footer />
+      <StickyCta />
+    </>
+  )
 }

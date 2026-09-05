@@ -1,0 +1,113 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #FFFFFF17;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+padding: clamp(15px, 12vw, 29px) clamp(24px, 12vw, 240px);
+}
+.MainConatiner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+
+}
+.logocontainer{
+    display: flex;
+    justify-content: left;
+}
+.logocontainer img{
+    max-width: 81px;
+    max-height: 95px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+.wp{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    gap: 14px;
+    align-items: center;
+    padding: 3px 14.51px 3px 3px;
+    border-radius: 999px;
+    background:
+        linear-gradient(#000000, #000000) padding-box,
+        linear-gradient(180deg, #82EEB0 0%, #1FFA53 100%) border-box;
+    border: 1.02px solid transparent;
+    backdrop-filter: blur(42px);
+    -webkit-backdrop-filter: blur(42px);
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    width: fit-content;
+}
+.wpleft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 31px;
+    height: 31px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    padding: 5px 5px 6px 6px;
+    background: linear-gradient(180deg, #82EEB0 0%, #00FF37 100%);
+    backdrop-filter: blur(42px);
+    -webkit-backdrop-filter: blur(42px);
+}
+.wpright{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.wpright p{
+    margin: 0;
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 140%;
+}
+.wpright svg{
+    transition: transform 0.3s ease;
+}
+.wp:hover .wpright svg{
+    transform: rotate(45deg);
+}
+@media (max-width: 640px) {
+  .main{
+    padding: 15px 24px;
+  }
+    .wp{
+        padding: 3px 8px 3px 3px;
+    }
+    .wpright p{
+        font-size: 14px;
+    }
+    .wpleft{
+        width: 27px;
+        height: 27px;
+    }
+    .wpleft svg{
+        width: 16px;
+        height: 16px;
+    }
+    .wpright{
+        gap: 4px;
+    }
+    .logocontainer img{
+        max-width: 45px;
+        max-height: 53px;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,31 @@
+.wrap {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+    display: flex;
+    align-items: flex-end;
+}
+.bar {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 100%;
+    transform: scale(1.35, 1);
+    transform-origin: bottom center;
+    will-change: transform;
+    background: linear-gradient(
+        to top,
+        #7A1400 0%,
+        #A32A0E 10%,
+        #C94A16 20%,
+        #E2711F 30%,
+        #EEA032 40%,
+        #F3C34A 50%,
+        #E8C978 60%,
+        #B79A5E 70%,
+        #6B5636 80%,
+        #2C2013 90%,
+        #0A0805 100%
+    );
+}

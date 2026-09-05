@@ -1,0 +1,198 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #000000;
+    padding:
+    0
+    clamp(80px, 15vw, 230px)
+    clamp(80px, 8vw, 120px)
+    clamp(80px, 15vw, 288px);
+    box-sizing: border-box;
+    position: relative;
+    z-index: 20;
+}
+.MainContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+.top{
+    display: flex;
+    justify-content: flex-start;
+}
+.top h3{
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: var(--fs-34);
+    color: #FFFFFF;
+    margin: 0;
+}
+.italic{
+    font-family: var(--font-awesome-serif);
+    font-style: italic;
+    font-weight: 400;
+    color: #FA7598;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    column-gap: 30px;
+    width: 100%;
+}
+.card{
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 11px 25px 22px 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background:
+        radial-gradient(120% 90% at 20% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%) padding-box,
+        linear-gradient(#0D0D0D, #0D0D0D) padding-box,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(238, 237, 237, 0.15) 90%) border-box;
+    border: 0.11px solid transparent;
+    box-shadow: inset -5.55px -5.55px 277px 0px rgba(255, 255, 255, 0.02);
+}
+.cardGlow{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.55;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(14px) brightness(1);
+    mask-image: linear-gradient(to top, #000000 0%, #000000 22%, transparent 88%);
+    -webkit-mask-image: linear-gradient(to top, #000000 0%, #000000 22%, transparent 88%);
+    pointer-events: none;
+}
+.cardImage{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 365px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+.imgDesktop,
+.imgMobile{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
+.imgMobile{
+    display: none;
+}
+.cardContent{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.cardNameRow{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    width: fit-content;
+}
+.cardName{
+    font-family: var(--font-pretendard);
+    font-weight: 500;
+    font-size: var(--fs-26);
+    color: #FFFFFF;
+}
+.cardArrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+.cardNameRow:hover .cardArrow{
+    transform: rotate(45deg);
+}
+.divider{
+    width: 100%;
+    max-width: 198px;
+    height: 0.8px;
+    background-color: rgba(255, 255, 255, 0.26);
+}
+.cardStat{
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #FFFFFF;
+    margin: 0;
+    max-width: 563px;
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+    .main{
+        padding-left: clamp(24px, 7vw, 150px);
+        padding-right: clamp(24px, 7vw, 150px);
+    }
+}
+@media (max-width: 640px) {
+    .main{
+        padding: 0px 24px 80px 24px;
+    }
+    .MainContainer{
+        gap: 24px;
+    }
+    .top h3{
+        font-size: 24px;
+    }
+    .grid{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .card{
+        padding: 10px 0 16px 0;
+    }
+    .cardContent{
+        padding: 0 16px;
+    }
+    .cardImage{
+        height: auto;
+    }
+    .imgDesktop{
+        display: none;
+    }
+    .imgMobile{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+        margin: 0;
+    }
+    .cardName{
+        font-size: 16px;
+    }
+    .cardStat{
+        font-size: 13px;
+        max-width: 100%;
+    }
+    .divider{
+        max-width: 100%;
+    }
+}

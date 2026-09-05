@@ -1,0 +1,116 @@
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 0;
+    box-sizing: border-box;
+    background-color: #000000;
+    overflow: hidden;
+    padding: 35px 0 40px 24px;
+}
+.Top{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 806px;
+    min-width: 0;
+    gap: 30px;
+}
+.Top h5{
+        font-family: var(--font-pretendard);
+    font-weight: 600;
+    font-size: var(--fs-20);
+    color: #FFFFFF;
+    margin: 0;
+    min-width: 0;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+.Top h2{
+    font-family: var(--font-pretendard);
+    font-weight: 600;
+    font-size: var(--fs-64);
+    color: #FFFFFF;
+    margin: 0;
+    min-width: 0;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+.gur{
+     font-family: var(--font-awesome-serif);
+    font-weight: 600;
+    font-size: var(--fs-64);
+    color: #FA7598;
+    margin: 0;
+    text-align: center;
+}
+.mobileBreak{
+    display: none;
+}
+.Bottom{
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+}
+.ctaGlass{
+    display: inline-flex;
+    padding: 10px 15px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(42px);
+    -webkit-backdrop-filter: blur(42px);
+}
+.cta{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 25px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-pretendard);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000;
+    cursor: pointer;
+    white-space: nowrap;
+}
+@media (max-width: 640px) {
+    .ctaGlass{
+        padding: 8px 10px;
+    }
+    .main{
+        padding: 40px 24px 40px 24px;
+    }
+    .Bottom{
+        display: none;
+    }
+    .cta{
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+    .Top{
+        gap: 16px;
+    }
+    .Top h5{
+        font-size: 16px;
+    }
+    .Top h2{
+        font-size: 36px;
+    }
+    .gur{
+        font-size: 42px;
+    }
+    .mobileBreak{
+        display: inline;
+    }
+}

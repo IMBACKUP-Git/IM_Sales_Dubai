@@ -1,0 +1,154 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #000000;
+    padding:
+    0
+    clamp(80px, 15vw, 230px)
+    0
+    clamp(80px, 15vw, 288px);
+    box-sizing: border-box;
+    position: relative;
+    z-index: 20;
+}
+.MainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: clamp(34px, 5vw, 45px);
+    border-radius: 24px;
+    background: url('./1.png') no-repeat center center / cover;
+    padding:
+    clamp(40px, 6vw, 76px)
+    clamp(24px, 6vw, 24px)
+}
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 14px;
+}
+.top h3{
+    font-size: var(--fs-34);
+    font-weight: 400;
+    font-family: var(--font-pretendard);
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+
+}
+.italic{
+    font-family: var(--font-awesome-serif);
+    font-style: italic;
+    color: #FFFFFF;
+}
+.top p{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-pretendard);
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+    max-width: 520px;
+}
+.bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttoncta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 7.5px 8px 7.5px 18px;
+    background-color:#FFFFFF;
+    border-radius: 55px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--font-pretendard);
+    color: #000000;
+    margin: 0;
+}
+.buttoncta span:first-child{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--font-pretendard);
+    color: #000000;
+    margin: 0;
+}
+.ctaArrow {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+.ctaArrow svg {
+    transition: transform 0.3s ease;
+}
+.ctaArrow:hover {
+    background-color: #FFB600;
+}
+.buttoncta:hover .ctaArrow {
+    transform: rotate(45deg);
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+    .main{
+        padding-left: clamp(24px, 7vw, 150px);
+        padding-right: clamp(24px, 7vw, 150px);
+    }
+}
+@media (max-width: 640px) {
+    .MainContainer{
+        padding: 40px 32px 50px 32px;
+        gap: 34px;
+        background-size: cover;
+    }
+    .main{
+        padding: 0px 24px 0px 24px;
+    }
+    .buttoncta span:first-child{
+        font-size: 14px;
+    }
+    .top h3{
+        font-size: 24px;
+        text-align: center;
+    }
+    .top p{
+        font-size: 14px;
+        max-width: 90%;
+    }
+    .top{
+        gap: 14px;
+    }
+    .buttoncta{
+        padding: 7.5px 8px 7.5px 18px;
+        gap: 10px;
+    }
+    .ctaArrow {
+        width: 24px;
+        height: 24px;
+    }
+    .ctaArrow svg {
+        width: 11px;
+        height: 11px;
+    }
+}
+@media (min-width:641px) and (max-width: 1024px){
+    .main{
+        padding-top: 90px;
+    }
+}

@@ -1,0 +1,78 @@
+.stickyOuter {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .stickyOuter {
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        z-index: 9999;
+        pointer-events: none;
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .hidden {
+        opacity: 0;
+        transform: translateY(20px);
+        pointer-events: none !important;
+    }
+}
+
+.stickyOuter > * {
+    pointer-events: all;
+}
+
+.glassBorder {
+    padding: 10px 15px;
+    border-radius: 999px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(42px);
+    -webkit-backdrop-filter: blur(42px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.ctaWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 8px 12px 20px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.85);
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.ctaText {
+    font-family: var(--font-pretendard);
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    white-space: nowrap;
+}
+
+.ctaCircle {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ctaArrow {
+    width: 11px;
+    height: 11px;
+}
