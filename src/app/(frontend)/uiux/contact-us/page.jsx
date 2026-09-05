@@ -34,15 +34,15 @@ export const metadata = {
   },
 }
 
-import ContactCopy from '../_components/contactpage/ContactCopy/ContactCopy'
-import FAQS from '../_components/contactpage/FAQCopy/FAQCopy'
-import Footer from '../_components/contactpage/footerCopy/footerCopy'
-import StickyCta from '../_components/contactpage/StickyCta/StickyCta'
+import Contact from '../Components/Contact/Contact'
+import FAQS from '../Components/FAQS/FAQS'
+import Footer from '../Components/Footer/footerCopy'
+import StickyCta from '../Components/StickyCta/StickyCta'
 
 export default function ContactUsPage() {
   return (
     <>
-      <ContactCopy />
+      <Contact />
       <FAQS />
       <div id="footer-sentinel" style={{ height: '1px' }} />
       <Footer />

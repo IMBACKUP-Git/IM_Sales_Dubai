@@ -34,15 +34,15 @@ export const metadata = {
   },
 }
 
-import ReserveCopy from '../_components/reservepage/ReserveCopy/ReserveCopy'
-import FAQS from '../_components/reservepage/FAQCopy/FAQCopy'
-import Footer from '../_components/reservepage/footerCopy/footerCopy'
-import StickyCta from '../_components/reservepage/StickyCta/StickyCta'
+import Contact from '../Components/Contact/Contact'
+import FAQS from '../Components/FAQS/FAQS'
+import Footer from '../Components/Footer/footerCopy'
+import StickyCta from '../Components/StickyCta/StickyCta'
 
 export default function ReservePage() {
   return (
     <>
-      <ReserveCopy />
+      <Contact />
       <FAQS />
       <div id="footer-sentinel" style={{ height: '1px' }} />
       <Footer />
