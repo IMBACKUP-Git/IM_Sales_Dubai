@@ -14,6 +14,10 @@ import glow1 from './1.webp'
 import glow2 from './2.webp'
 import glow3 from './3.webp'
 import glow4 from './4.webp'
+import p1 from '../Contact/p1.webp'
+import p2 from '../Contact/p2.webp'
+import p3 from '../Contact/p3.webp'
+import p4 from '../Contact/p4.webp'
 
 const ArrowIcon = () => (
   <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,6 +36,7 @@ const projects = [
     desktopImg: d1,
     mobileImg: m1,
     glow: glow1,
+    popupBg: p1,
     popupImages: [
       { type: 'landscape', src: '/assets/images/uiux/Whitemantis/1.webp' },
       { type: 'landscape', src: '/assets/images/uiux/Whitemantis/2.webp' },
@@ -46,6 +51,7 @@ const projects = [
     desktopImg: d2,
     mobileImg: m2,
     glow: glow2,
+    popupBg: p2,
     popupImages: [
       { type: 'landscape', src: '/assets/images/uiux/Surge/1.webp' },
       {
@@ -66,6 +72,7 @@ const projects = [
     desktopImg: d3,
     mobileImg: m3,
     glow: glow3,
+    popupBg: p3,
     popupImages: [
       { type: 'landscape', src: '/assets/images/uiux/Alhuzaifa/1.webp' },
       {
@@ -86,6 +93,7 @@ const projects = [
     desktopImg: d4,
     mobileImg: m4,
     glow: glow4,
+    popupBg: p4,
     popupImages: [
       { type: 'landscape', src: '/assets/images/uiux/Chrysaliis/1.webp' },
       {

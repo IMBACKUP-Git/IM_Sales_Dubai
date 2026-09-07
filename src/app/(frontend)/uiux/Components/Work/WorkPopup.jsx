@@ -33,7 +33,11 @@ const WorkPopup = ({ project, onClose }) => {
 
   return (
     <div className={styles.overlay} onClick={handleOverlayClick} role="dialog" aria-modal="true">
-      <div className={styles.popup} ref={panelRef}>
+      <div
+        className={styles.popup}
+        ref={panelRef}
+        style={project.popupBg ? { backgroundImage: `url(${project.popupBg.src})` } : undefined}
+      >
         <button className={styles.closeBtn} onClick={onClose} aria-label="Close">
           <CloseIcon />
         </button>
